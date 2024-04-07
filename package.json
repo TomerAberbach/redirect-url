@@ -7,7 +7,15 @@
     "url": "https://tomeraberba.ch"
   },
   "description": "Simple mapping from one URL to another based on configurable redirect rules.",
-  "keywords": [],
+  "keywords": [
+    "http",
+    "https",
+    "mapping",
+    "redirect",
+    "path",
+    "server",
+    "url"
+  ],
   "homepage": "https://github.com/TomerAberbach/redirect-url",
   "repository": "TomerAberbach/redirect-url",
   "bugs": {
