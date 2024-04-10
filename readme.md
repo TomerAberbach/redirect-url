@@ -36,10 +36,63 @@ $ npm i redirect-url
 ## Usage
 
 ```js
-import redirectUrl from 'redirect-url'
+import { createRedirectUrl, parseRedirectUrl } from 'redirect-url'
 
-console.log(redirectUrl())
-//=> Hello World!
+let redirectUrl = createRedirectUrl([
+  [`/bliss`, `https://www.youtube.com/watch?v=dQw4w9WgXcQ`],
+  { from: `/home`, to: `/`, status: 307 },
+  [`/:splat*.html`, `/:splat*`],
+])
+// OR
+redirectUrl = parseRedirectUrl(`
+  # Nice :)
+  /bliss          https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+  # Other redirects...
+  /home           /          307
+  /:splat*.html   /:splat*
+`)
+
+console.log(redirectUrl(`https://example.com/bliss`))
+//=> { url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', status: 301 }
+console.log(redirectUrl(`https://example.com/home`))
+//=> { url: 'https://example.com', status: 307 }
+console.log(redirectUrl(`https://example.com/about-me.html`))
+//=> { url: 'https://example.com/about-me', status: 301 }
+console.log(redirectUrl(`https://example.com/spaghetti`))
+//=> null
+```
+
+This package can be used in any server or framework, but see some examples
+below. Feel free to send pull requests for more examples!
+
+### Express
+
+```js
+const redirectsMiddleware = (req, res, next) => {
+  const redirectResult = redirectUrl(req.url)
+  if (redirectResult) {
+    res.redirect(redirectResult.status, redirectResult.url)
+  }
+  next()
+}
+
+app.all(`*`, redirectsMiddleware)
+```
+
+### Remix
+
+[**entry.server**](https://remix.run/docs/en/main/file-conventions/entry.server):
+
+```js
+export const handleDataRequest = (response, { request, params, context }) => {
+  const redirectResult = redirectUrl(request.url)
+  if (redirectResult) {
+    throw redirect(redirectResult.url, redirectResult.status)
+  }
+
+  // ...
+}
 ```
 
 ## Contributing

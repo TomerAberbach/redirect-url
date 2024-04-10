@@ -236,8 +236,8 @@ export type ObjectRedirect = {
    * cases, any query params or fragments present on an input URL matching the
    * {@link ObjectRedirect#from} pattern are carried over to the redirect URL.
    *
-   * Query params are always appended, even for duplicate query param names,
-   * while the fragments always overwrite.
+   * Trailing slashes are always stripped. Query params are always appended,
+   * even for duplicate query param names, while the fragments always overwrite.
    */
   to: string
 
