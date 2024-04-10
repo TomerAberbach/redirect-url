@@ -37,7 +37,7 @@ with a status code for the redirection.
 
 #### Defined in
 
-[index.ts:208](https://github.com/TomerAberbach/redirect-url/blob/ee59f174f88b7e69799cd2c707fd833365fd70df/src/index.ts#L208)
+[index.ts:208](https://github.com/TomerAberbach/redirect-url/blob/4e17d8c2edc6dabcdfc2797cee7b1caf9ada3364/src/index.ts#L208)
 
 ---
 
@@ -53,7 +53,7 @@ See `ObjectRedirect` for more information.
 
 #### Defined in
 
-[index.ts:194](https://github.com/TomerAberbach/redirect-url/blob/ee59f174f88b7e69799cd2c707fd833365fd70df/src/index.ts#L194)
+[index.ts:194](https://github.com/TomerAberbach/redirect-url/blob/4e17d8c2edc6dabcdfc2797cee7b1caf9ada3364/src/index.ts#L194)
 
 ---
 
@@ -81,7 +81,7 @@ status code for the redirection, or null if no mapping exists for the input URL.
 
 #### Defined in
 
-[index.ts:292](https://github.com/TomerAberbach/redirect-url/blob/ee59f174f88b7e69799cd2c707fd833365fd70df/src/index.ts#L292)
+[index.ts:292](https://github.com/TomerAberbach/redirect-url/blob/4e17d8c2edc6dabcdfc2797cee7b1caf9ada3364/src/index.ts#L292)
 
 ---
 
@@ -104,7 +104,7 @@ All properties are optional.
 
 #### Defined in
 
-[index.ts:253](https://github.com/TomerAberbach/redirect-url/blob/ee59f174f88b7e69799cd2c707fd833365fd70df/src/index.ts#L253)
+[index.ts:253](https://github.com/TomerAberbach/redirect-url/blob/4e17d8c2edc6dabcdfc2797cee7b1caf9ada3364/src/index.ts#L253)
 
 ---
 
@@ -123,7 +123,7 @@ The result of computing a redirect for a URL.
 
 #### Defined in
 
-[index.ts:279](https://github.com/TomerAberbach/redirect-url/blob/ee59f174f88b7e69799cd2c707fd833365fd70df/src/index.ts#L279)
+[index.ts:279](https://github.com/TomerAberbach/redirect-url/blob/4e17d8c2edc6dabcdfc2797cee7b1caf9ada3364/src/index.ts#L279)
 
 ---
 
@@ -138,7 +138,7 @@ See `ObjectRedirect` for more information.
 
 #### Defined in
 
-[index.ts:202](https://github.com/TomerAberbach/redirect-url/blob/ee59f174f88b7e69799cd2c707fd833365fd70df/src/index.ts#L202)
+[index.ts:202](https://github.com/TomerAberbach/redirect-url/blob/4e17d8c2edc6dabcdfc2797cee7b1caf9ada3364/src/index.ts#L202)
 
 ## Functions
 
@@ -172,7 +172,7 @@ See [Redirect](modules.md#redirect) for how to specify redirects and
 
 #### Defined in
 
-[index.ts:106](https://github.com/TomerAberbach/redirect-url/blob/ee59f174f88b7e69799cd2c707fd833365fd70df/src/index.ts#L106)
+[index.ts:106](https://github.com/TomerAberbach/redirect-url/blob/4e17d8c2edc6dabcdfc2797cee7b1caf9ada3364/src/index.ts#L106)
 
 ---
 
@@ -228,4 +228,4 @@ See [Redirect](modules.md#redirect) for how to specify redirects and
 
 #### Defined in
 
-[index.ts:56](https://github.com/TomerAberbach/redirect-url/blob/ee59f174f88b7e69799cd2c707fd833365fd70df/src/index.ts#L56)
+[index.ts:56](https://github.com/TomerAberbach/redirect-url/blob/4e17d8c2edc6dabcdfc2797cee7b1caf9ada3364/src/index.ts#L56)

@@ -90,11 +90,13 @@ app.all(`*`, redirectsMiddleware)
 
 [**entry.server**](https://remix.run/docs/en/main/file-conventions/entry.server):
 
+<!-- eslint-disable consistent-return -->
+
 ```js
 export const handleDocumentRequest = request => {
   const result = redirectUrl(request.url)
   if (result) {
-    throw redirect(result.url, result.status)
+    return redirect(result.url, result.status)
   }
 
   // ...
