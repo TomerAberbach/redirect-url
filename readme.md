@@ -101,6 +101,11 @@ export const handleDocumentRequest = request => {
 }
 ```
 
+## API
+
+See the
+[TSDoc comments](https://github.com/TomerAberbach/redirect-url/blob/main/src/index.ts).
+
 ## Contributing
 
 Stars are always welcome!
