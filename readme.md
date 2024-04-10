@@ -85,7 +85,7 @@ app.all(`*`, redirectsMiddleware)
 [**entry.server**](https://remix.run/docs/en/main/file-conventions/entry.server):
 
 ```js
-export const handleDataRequest = (response, { request, params, context }) => {
+export const handleDocumentRequest = request => {
   const result = redirectUrl(request.url)
   if (result) {
     throw redirect(result.url, result.status)
