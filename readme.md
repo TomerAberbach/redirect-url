@@ -18,7 +18,7 @@
 </div>
 
 <div align="center">
-  Simple mapping from one URL to another based on configurable redirect rules.
+  Simple rule-based redirecting from one URL to another.
 </div>
 
 ## Features

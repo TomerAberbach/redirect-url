@@ -6,7 +6,7 @@
     "email": "tomeraberbach@gmail.com",
     "url": "https://tomeraberba.ch"
   },
-  "description": "Simple mapping from one URL to another based on configurable redirect rules.",
+  "description": "Simple rule-based redirecting from one URL to another.",
   "keywords": [
     "http",
     "https",
