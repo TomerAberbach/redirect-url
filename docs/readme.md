@@ -49,16 +49,16 @@ let redirectUrl = createRedirectUrl([
 
   // Other redirects...
   { from: `/home`, to: `/`, status: 307 },
-  [`/:splat*.html`, `/:splat*`],
+  [`/:splat*\\.html`, `/:splat*`],
 ])
 // OR
 redirectUrl = parseRedirectUrl(`
   # Nice :)
-  /bliss          https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  /bliss            https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
   # Other redirects...
-  /home           /          307
-  /:splat*.html   /:splat*
+  /home             /          307
+  /:splat*\\.html   /:splat*
 `)
 
 console.log(redirectUrl(`https://example.com/bliss`))

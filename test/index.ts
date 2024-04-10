@@ -66,6 +66,9 @@ test.each([
   [`https://tomeraberba.ch/g/#y`, [`https://tomeraberba.ch/7#y`, 301]],
   [`https://tomeraberba.ch/g?x=y#y`, [`https://tomeraberba.ch/7?x=y#y`, 301]],
   [`https://tomeraberba.ch/g/?x=y#y`, [`https://tomeraberba.ch/7?x=y#y`, 301]],
+
+  [`https://tomeraberba.ch/i/wow`, [`https://tomeraberba.ch/wow`, 301]],
+  [`https://tomeraberba.ch/i/wow.html`, [`https://tomeraberba.ch/wow`, 301]],
 ] as const)(`createRedirectUrl - %p -> %p (%p)`, (url, result) => {
   const redirectUrl = createRedirectUrl([
     [`/`, `/0`],
@@ -80,6 +83,7 @@ test.each([
     [`/f`, `/6?a=b`],
     [`/g`, `/7/#x`],
     [`/h`, `/8?a=b#x`],
+    [`/i/:splat*(\\.html)?`, `/:splat*`],
   ])
 
   expect(redirectUrl(url)).toStrictEqual(createResult(result))
