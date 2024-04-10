@@ -95,7 +95,7 @@ app.all(`*`, redirectsMiddleware)
 <!-- eslint-disable consistent-return -->
 
 ```js
-export const handleDocumentRequest = request => {
+const handleRequest = request => {
   const result = redirectUrl(request.url)
   if (result) {
     return redirect(result.url, result.status)
@@ -103,6 +103,8 @@ export const handleDocumentRequest = request => {
 
   // ...
 }
+
+export default handleRequest
 ```
 
 ## API
