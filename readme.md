@@ -23,9 +23,12 @@
 
 ## Features
 
-- **Wow:** so amazing
-- **Amazing:** so wow
-- **Fancy:** has a tie and everything
+- **Flexible:** completely framework agnostic
+- **Powerful:** specify redirects using
+  [`path-to-regexp` patterns](https://github.com/pillarjs/path-to-regexp?tab=readme-ov-file#parameters)
+- **Readable:** configure using a
+  [Netlify `_redirects`](https://docs.netlify.com/routing/redirects#syntax-for-the-redirects-file)-like
+  syntax
 
 ## Install
 
@@ -39,7 +42,10 @@ $ npm i redirect-url
 import { createRedirectUrl, parseRedirectUrl } from 'redirect-url'
 
 let redirectUrl = createRedirectUrl([
+  // Nice :)
   [`/bliss`, `https://www.youtube.com/watch?v=dQw4w9WgXcQ`],
+
+  // Other redirects...
   { from: `/home`, to: `/`, status: 307 },
   [`/:splat*.html`, `/:splat*`],
 ])
@@ -63,8 +69,8 @@ console.log(redirectUrl(`https://example.com/spaghetti`))
 //=> null
 ```
 
-This package can be used in any server or framework, but see some examples
-below. Feel free to send pull requests for more examples!
+This package can be used with any server or framework, but see some example
+integrations below. Feel free to send pull requests for more examples!
 
 ### Express
 
