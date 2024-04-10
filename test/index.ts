@@ -17,15 +17,6 @@
 import { createRedirectUrl, parseRedirectUrl } from '../src/index.ts'
 import type { RedirectUrlResult } from '../src/index.ts'
 
-test.each([`https://tomeraberba.ch`, `/a?`, `/a?x=2`, `/a#`, `/a#x`])(
-  `createRedirectUrl - bad from path %p`,
-  from => {
-    expect(() => createRedirectUrl([[from, `/`]])).toThrow(
-      new Error(`Bad from path: ${from}`),
-    )
-  },
-)
-
 test.each([
   [`https://tomeraberba.ch`, [`https://tomeraberba.ch/0`, 301]],
   [`https://tomeraberba.ch/`, [`https://tomeraberba.ch/0`, 301]],

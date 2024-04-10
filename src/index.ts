@@ -136,11 +136,10 @@ const compileRedirect = (
   }: ReadonlyDeep<RequiredDeep<RedirectUrlOptions>>,
 ): CompiledRedirect => {
   const { from, to, status = defaultStatus } = normalizeRedirect(redirect)
-  if (!isPath(from)) {
-    throw new Error(`Bad from path: ${from}`)
-  }
 
-  const pathToParams = createPathToParamsFunction(getPath(from), { decode })
+  const pathToParams = createPathToParamsFunction(removeTrailingSlash(from), {
+    decode,
+  })
   const paramsToPath = createParamsToPathFunction(getPath(to), { encode })
 
   return {
@@ -180,13 +179,8 @@ const normalizeRedirect = (
   return { from, to }
 }
 
-const isPath = (url: string): boolean => createUrl(url).pathname === url
-
 const getPath = (url: string | URL): string =>
-  removeTrailingSlash(createUrl(url).pathname)
-
-const createUrl = (url: string | URL): URL =>
-  new URL(url, `https://tomeraberba.ch`)
+  removeTrailingSlash(new URL(url, `https://tomeraberba.ch`).pathname)
 
 const removeTrailingSlash = (url: string): string =>
   url.endsWith(`/`) ? url.slice(0, -1) : url
@@ -238,6 +232,8 @@ export type ObjectRedirect = {
    *
    * Trailing slashes are always stripped. Query params are always appended,
    * even for duplicate query param names, while the fragments always overwrite.
+   * Although, note that servers don't receive fragments so that behavior only
+   * matters when using this package on the client.
    */
   to: string
 

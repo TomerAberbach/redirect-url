@@ -29,15 +29,15 @@ with a status code for the redirection.
 
 #### Type declaration
 
-| Name      | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| :-------- | :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `from`    | `string` | A string specifying the pattern a URL's path must match for this redirect to apply to it. The pattern must be a path (no host, query params, fragment, etc.) that follows `path-to-regexp`'s syntax: https://github.com/pillarjs/path-to-regexp#parameters Matching is case-insensitive and ignores trailing slashes.                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `status?` | `number` | The status code to use for the redirection. Defaults to [RedirectUrlOptions#defaultStatus](modules.md#defaultstatus) if not specified.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `to`      | `string` | A string specifying the URL to redirect to. The string may use parameters of the [ObjectRedirect#from](modules.md#from) path pattern according to `path-to-regexp`'s syntax: https://github.com/pillarjs/path-to-regexp#match The string may be a path or a full URL. For the former, the URL returned by [RedirectUrl](modules.md#redirecturl) will use the host of the matching input URL. In both cases, any query params or fragments present on an input URL matching the [ObjectRedirect#from](modules.md#from) pattern are carried over to the redirect URL. Trailing slashes are always stripped. Query params are always appended, even for duplicate query param names, while the fragments always overwrite. |
+| Name      | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| :-------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `from`    | `string` | A string specifying the pattern a URL's path must match for this redirect to apply to it. The pattern must be a path (no host, query params, fragment, etc.) that follows `path-to-regexp`'s syntax: https://github.com/pillarjs/path-to-regexp#parameters Matching is case-insensitive and ignores trailing slashes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `status?` | `number` | The status code to use for the redirection. Defaults to [RedirectUrlOptions#defaultStatus](modules.md#defaultstatus) if not specified.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `to`      | `string` | A string specifying the URL to redirect to. The string may use parameters of the [ObjectRedirect#from](modules.md#from) path pattern according to `path-to-regexp`'s syntax: https://github.com/pillarjs/path-to-regexp#match The string may be a path or a full URL. For the former, the URL returned by [RedirectUrl](modules.md#redirecturl) will use the host of the matching input URL. In both cases, any query params or fragments present on an input URL matching the [ObjectRedirect#from](modules.md#from) pattern are carried over to the redirect URL. Trailing slashes are always stripped. Query params are always appended, even for duplicate query param names, while the fragments always overwrite. Although, note that servers don't receive fragments so that behavior only matters when using this package on the client. |
 
 #### Defined in
 
-[index.ts:214](https://github.com/TomerAberbach/redirect-url/blob/15c0825b6681fc47ca26b6b9b7996b91f1caa403/src/index.ts#L214)
+[index.ts:208](https://github.com/TomerAberbach/redirect-url/blob/460890ffa6c04c161f01e284f52b41e435fc4830/src/index.ts#L208)
 
 ---
 
@@ -53,7 +53,7 @@ See `ObjectRedirect` for more information.
 
 #### Defined in
 
-[index.ts:200](https://github.com/TomerAberbach/redirect-url/blob/15c0825b6681fc47ca26b6b9b7996b91f1caa403/src/index.ts#L200)
+[index.ts:194](https://github.com/TomerAberbach/redirect-url/blob/460890ffa6c04c161f01e284f52b41e435fc4830/src/index.ts#L194)
 
 ---
 
@@ -81,7 +81,7 @@ status code for the redirection, or null if no mapping exists for the input URL.
 
 #### Defined in
 
-[index.ts:296](https://github.com/TomerAberbach/redirect-url/blob/15c0825b6681fc47ca26b6b9b7996b91f1caa403/src/index.ts#L296)
+[index.ts:292](https://github.com/TomerAberbach/redirect-url/blob/460890ffa6c04c161f01e284f52b41e435fc4830/src/index.ts#L292)
 
 ---
 
@@ -104,7 +104,7 @@ All properties are optional.
 
 #### Defined in
 
-[index.ts:257](https://github.com/TomerAberbach/redirect-url/blob/15c0825b6681fc47ca26b6b9b7996b91f1caa403/src/index.ts#L257)
+[index.ts:253](https://github.com/TomerAberbach/redirect-url/blob/460890ffa6c04c161f01e284f52b41e435fc4830/src/index.ts#L253)
 
 ---
 
@@ -123,7 +123,7 @@ The result of computing a redirect for a URL.
 
 #### Defined in
 
-[index.ts:283](https://github.com/TomerAberbach/redirect-url/blob/15c0825b6681fc47ca26b6b9b7996b91f1caa403/src/index.ts#L283)
+[index.ts:279](https://github.com/TomerAberbach/redirect-url/blob/460890ffa6c04c161f01e284f52b41e435fc4830/src/index.ts#L279)
 
 ---
 
@@ -138,7 +138,7 @@ See `ObjectRedirect` for more information.
 
 #### Defined in
 
-[index.ts:208](https://github.com/TomerAberbach/redirect-url/blob/15c0825b6681fc47ca26b6b9b7996b91f1caa403/src/index.ts#L208)
+[index.ts:202](https://github.com/TomerAberbach/redirect-url/blob/460890ffa6c04c161f01e284f52b41e435fc4830/src/index.ts#L202)
 
 ## Functions
 
@@ -172,7 +172,7 @@ See [Redirect](modules.md#redirect) for how to specify redirects and
 
 #### Defined in
 
-[index.ts:106](https://github.com/TomerAberbach/redirect-url/blob/15c0825b6681fc47ca26b6b9b7996b91f1caa403/src/index.ts#L106)
+[index.ts:106](https://github.com/TomerAberbach/redirect-url/blob/460890ffa6c04c161f01e284f52b41e435fc4830/src/index.ts#L106)
 
 ---
 
@@ -228,4 +228,4 @@ See [Redirect](modules.md#redirect) for how to specify redirects and
 
 #### Defined in
 
-[index.ts:56](https://github.com/TomerAberbach/redirect-url/blob/15c0825b6681fc47ca26b6b9b7996b91f1caa403/src/index.ts#L56)
+[index.ts:56](https://github.com/TomerAberbach/redirect-url/blob/460890ffa6c04c161f01e284f52b41e435fc4830/src/index.ts#L56)
