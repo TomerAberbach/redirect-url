@@ -70,9 +70,9 @@ below. Feel free to send pull requests for more examples!
 
 ```js
 const redirectsMiddleware = (req, res, next) => {
-  const redirectResult = redirectUrl(req.url)
-  if (redirectResult) {
-    res.redirect(redirectResult.status, redirectResult.url)
+  const result = redirectUrl(req.url)
+  if (result) {
+    res.redirect(result.status, result.url)
   }
   next()
 }
@@ -86,9 +86,9 @@ app.all(`*`, redirectsMiddleware)
 
 ```js
 export const handleDataRequest = (response, { request, params, context }) => {
-  const redirectResult = redirectUrl(request.url)
-  if (redirectResult) {
-    throw redirect(redirectResult.url, redirectResult.status)
+  const result = redirectUrl(request.url)
+  if (result) {
+    throw redirect(result.url, result.status)
   }
 
   // ...
