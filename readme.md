@@ -60,11 +60,11 @@ redirectUrl = parseRedirectUrl(`
 `)
 
 console.log(redirectUrl(`https://example.com/bliss`))
-//=> { url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', status: 301 }
+//=> { url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', status: 302 }
 console.log(redirectUrl(`https://example.com/home`))
 //=> { url: 'https://example.com', status: 307 }
 console.log(redirectUrl(`https://example.com/about-me.html`))
-//=> { url: 'https://example.com/about-me', status: 301 }
+//=> { url: 'https://example.com/about-me', status: 302 }
 console.log(redirectUrl(`https://example.com/spaghetti`))
 //=> null
 ```

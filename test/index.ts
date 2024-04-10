@@ -18,57 +18,57 @@ import { createRedirectUrl, parseRedirectUrl } from '../src/index.ts'
 import type { RedirectUrlResult } from '../src/index.ts'
 
 test.each([
-  [`https://tomeraberba.ch`, [`https://tomeraberba.ch/0`, 301]],
-  [`https://tomeraberba.ch/`, [`https://tomeraberba.ch/0`, 301]],
+  [`https://tomeraberba.ch`, [`https://tomeraberba.ch/0`, 302]],
+  [`https://tomeraberba.ch/`, [`https://tomeraberba.ch/0`, 302]],
 
-  [`https://tomeraberba.ch/a`, [`https://tomeraberba.ch/1`, 301]],
-  [`https://tomeraberba.ch/a/`, [`https://tomeraberba.ch/1`, 301]],
+  [`https://tomeraberba.ch/a`, [`https://tomeraberba.ch/1`, 302]],
+  [`https://tomeraberba.ch/a/`, [`https://tomeraberba.ch/1`, 302]],
 
-  [`https://tomeraberba.ch/b`, [`https://tomeraberba.ch/2`, 301]],
-  [`https://tomeraberba.ch/b/`, [`https://tomeraberba.ch/2`, 301]],
+  [`https://tomeraberba.ch/b`, [`https://tomeraberba.ch/2`, 302]],
+  [`https://tomeraberba.ch/b/`, [`https://tomeraberba.ch/2`, 302]],
 
-  [`https://tomeraberba.ch/c`, [`https://tomeraberba.ch/3`, 301]],
-  [`https://tomeraberba.ch/c/`, [`https://tomeraberba.ch/3`, 301]],
+  [`https://tomeraberba.ch/c`, [`https://tomeraberba.ch/3`, 302]],
+  [`https://tomeraberba.ch/c/`, [`https://tomeraberba.ch/3`, 302]],
 
-  [`https://tomeraberba.ch/d`, [`https://tomeraberba.ch/4`, 301]],
-  [`https://tomeraberba.ch/d/`, [`https://tomeraberba.ch/4`, 301]],
+  [`https://tomeraberba.ch/d`, [`https://tomeraberba.ch/4`, 302]],
+  [`https://tomeraberba.ch/d/`, [`https://tomeraberba.ch/4`, 302]],
 
   [`https://tomeraberba.ch/e`, null],
   [`https://tomeraberba.ch/e/`, null],
 
-  [`https://tomeraberba.ch/e/x`, [`https://tomeraberba.ch/5/x`, 301]],
-  [`https://tomeraberba.ch/e/x/`, [`https://tomeraberba.ch/5/x`, 301]],
+  [`https://tomeraberba.ch/e/x`, [`https://tomeraberba.ch/5/x`, 302]],
+  [`https://tomeraberba.ch/e/x/`, [`https://tomeraberba.ch/5/x`, 302]],
 
   [`https://tomeraberba.ch/x`, [`https://tomeraberba.ch/y`, 307]],
   [`https://tomeraberba.ch/x/`, [`https://tomeraberba.ch/y`, 307]],
 
-  [`https://tomeraberba.ch?a=b`, [`https://tomeraberba.ch/0?a=b`, 301]],
-  [`https://tomeraberba.ch/?a=b`, [`https://tomeraberba.ch/0?a=b`, 301]],
-  [`https://tomeraberba.ch#x`, [`https://tomeraberba.ch/0#x`, 301]],
-  [`https://tomeraberba.ch/#x`, [`https://tomeraberba.ch/0#x`, 301]],
-  [`https://tomeraberba.ch?a=b#x`, [`https://tomeraberba.ch/0?a=b#x`, 301]],
-  [`https://tomeraberba.ch/?a=b#x`, [`https://tomeraberba.ch/0?a=b#x`, 301]],
+  [`https://tomeraberba.ch?a=b`, [`https://tomeraberba.ch/0?a=b`, 302]],
+  [`https://tomeraberba.ch/?a=b`, [`https://tomeraberba.ch/0?a=b`, 302]],
+  [`https://tomeraberba.ch#x`, [`https://tomeraberba.ch/0#x`, 302]],
+  [`https://tomeraberba.ch/#x`, [`https://tomeraberba.ch/0#x`, 302]],
+  [`https://tomeraberba.ch?a=b#x`, [`https://tomeraberba.ch/0?a=b#x`, 302]],
+  [`https://tomeraberba.ch/?a=b#x`, [`https://tomeraberba.ch/0?a=b#x`, 302]],
 
-  [`https://tomeraberba.ch/f`, [`https://tomeraberba.ch/6?a=b`, 301]],
-  [`https://tomeraberba.ch/f/`, [`https://tomeraberba.ch/6?a=b`, 301]],
-  [`https://tomeraberba.ch/f?a=c`, [`https://tomeraberba.ch/6?a=b&a=c`, 301]],
-  [`https://tomeraberba.ch/f/?a=c`, [`https://tomeraberba.ch/6?a=b&a=c`, 301]],
-  [`https://tomeraberba.ch/f?x=y`, [`https://tomeraberba.ch/6?a=b&x=y`, 301]],
-  [`https://tomeraberba.ch/f/?x=y`, [`https://tomeraberba.ch/6?a=b&x=y`, 301]],
-  [`https://tomeraberba.ch/f#x`, [`https://tomeraberba.ch/6?a=b#x`, 301]],
-  [`https://tomeraberba.ch/f/#x`, [`https://tomeraberba.ch/6?a=b#x`, 301]],
+  [`https://tomeraberba.ch/f`, [`https://tomeraberba.ch/6?a=b`, 302]],
+  [`https://tomeraberba.ch/f/`, [`https://tomeraberba.ch/6?a=b`, 302]],
+  [`https://tomeraberba.ch/f?a=c`, [`https://tomeraberba.ch/6?a=b&a=c`, 302]],
+  [`https://tomeraberba.ch/f/?a=c`, [`https://tomeraberba.ch/6?a=b&a=c`, 302]],
+  [`https://tomeraberba.ch/f?x=y`, [`https://tomeraberba.ch/6?a=b&x=y`, 302]],
+  [`https://tomeraberba.ch/f/?x=y`, [`https://tomeraberba.ch/6?a=b&x=y`, 302]],
+  [`https://tomeraberba.ch/f#x`, [`https://tomeraberba.ch/6?a=b#x`, 302]],
+  [`https://tomeraberba.ch/f/#x`, [`https://tomeraberba.ch/6?a=b#x`, 302]],
 
-  [`https://tomeraberba.ch/g`, [`https://tomeraberba.ch/7#x`, 301]],
-  [`https://tomeraberba.ch/g/`, [`https://tomeraberba.ch/7#x`, 301]],
-  [`https://tomeraberba.ch/g?x=y`, [`https://tomeraberba.ch/7?x=y#x`, 301]],
-  [`https://tomeraberba.ch/g/?x=y`, [`https://tomeraberba.ch/7?x=y#x`, 301]],
-  [`https://tomeraberba.ch/g#y`, [`https://tomeraberba.ch/7#y`, 301]],
-  [`https://tomeraberba.ch/g/#y`, [`https://tomeraberba.ch/7#y`, 301]],
-  [`https://tomeraberba.ch/g?x=y#y`, [`https://tomeraberba.ch/7?x=y#y`, 301]],
-  [`https://tomeraberba.ch/g/?x=y#y`, [`https://tomeraberba.ch/7?x=y#y`, 301]],
+  [`https://tomeraberba.ch/g`, [`https://tomeraberba.ch/7#x`, 302]],
+  [`https://tomeraberba.ch/g/`, [`https://tomeraberba.ch/7#x`, 302]],
+  [`https://tomeraberba.ch/g?x=y`, [`https://tomeraberba.ch/7?x=y#x`, 302]],
+  [`https://tomeraberba.ch/g/?x=y`, [`https://tomeraberba.ch/7?x=y#x`, 302]],
+  [`https://tomeraberba.ch/g#y`, [`https://tomeraberba.ch/7#y`, 302]],
+  [`https://tomeraberba.ch/g/#y`, [`https://tomeraberba.ch/7#y`, 302]],
+  [`https://tomeraberba.ch/g?x=y#y`, [`https://tomeraberba.ch/7?x=y#y`, 302]],
+  [`https://tomeraberba.ch/g/?x=y#y`, [`https://tomeraberba.ch/7?x=y#y`, 302]],
 
-  [`https://tomeraberba.ch/i/wow`, [`https://tomeraberba.ch/wow`, 301]],
-  [`https://tomeraberba.ch/i/wow.html`, [`https://tomeraberba.ch/wow`, 301]],
+  [`https://tomeraberba.ch/i/wow`, [`https://tomeraberba.ch/wow`, 302]],
+  [`https://tomeraberba.ch/i/wow.html`, [`https://tomeraberba.ch/wow`, 302]],
 ] as const)(`createRedirectUrl - %p -> %p (%p)`, (url, result) => {
   const redirectUrl = createRedirectUrl([
     [`/`, `/0`],
@@ -130,7 +130,7 @@ test(`parseRedirectUrl - success`, () => {
 
   expect(redirectUrl(`https://tomeraberba.ch/a`)).toStrictEqual({
     url: `https://tomeraberba.ch/b`,
-    status: 301,
+    status: 302,
   })
   expect(redirectUrl(`https://tomeraberba.ch/c`)).toStrictEqual({
     url: `https://tomeraberba.ch/d?x=2#x`,

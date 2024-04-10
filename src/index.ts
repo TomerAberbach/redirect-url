@@ -106,7 +106,7 @@ const WHITESPACE_REGEX = /\s+/u
 export const createRedirectUrl = (
   redirects: ReadonlyDeep<Redirect[]>,
   {
-    defaultStatus = 301,
+    defaultStatus = 302,
     encode = encodeURIComponent,
     decode = decodeURIComponent,
   }: ReadonlyDeep<RedirectUrlOptions> = {},
@@ -255,7 +255,7 @@ export type RedirectUrlOptions = {
    * The default status to use for redirects when no particular status is
    * specified.
    *
-   * Defaults to 301 ("Moved Permanently").
+   * Defaults to 302 ("Found").
    */
   defaultStatus?: number
 
