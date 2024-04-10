@@ -24,6 +24,9 @@ import type { ReadonlyDeep, RequiredDeep } from 'type-fest'
  * Compiles and returns a {@link RedirectUrl} function from a redirects
  * specification string.
  *
+ * The returned function computes its output based on the first redirect in
+ * `redirects` that matches the input URL. If none match, then it returns null.
+ *
  * For performance, do not call this function before each redirect computation.
  * Compile the {@link RedirectUrl} function once and reuse it.
  *
@@ -89,6 +92,10 @@ const WHITESPACE_REGEX = /\s+/u
 
 /**
  * Compiles and returns a {@link RedirectUrl} function.
+ *
+ * The returned function computes its output based on the first {@link Redirect}
+ * in `redirects` that matches the input URL. If none match, then it returns
+ * null.
  *
  * For performance, do not call this function before each redirect computation.
  * Compile the {@link RedirectUrl} function once and reuse it.
