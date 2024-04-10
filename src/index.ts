@@ -46,11 +46,11 @@ import type { ReadonlyDeep, RequiredDeep } from 'type-fest'
  * @example
  * ```
  * # Nice :)
- * /bliss  https://www.youtube.com/watch?v=dQw4w9WgXcQ
+ * /bliss          https://www.youtube.com/watch?v=dQw4w9WgXcQ
  *
  * # Other redirects...
- * /a      /b
- * /x/y/z  /a/b/c
+ * /home           /          307
+ * /:splat*.html   /:splat*
  * ```
  */
 export const parseRedirectUrl = (

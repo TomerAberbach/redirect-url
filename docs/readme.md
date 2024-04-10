@@ -105,8 +105,7 @@ export const handleDocumentRequest = request => {
 
 ## API
 
-See the
-[TSDoc comments](https://github.com/TomerAberbach/redirect-url/blob/main/src/index.ts).
+[See here!](https://github.com/TomerAberbach/redirect-url/blob/main/docs/modules.md)
 
 ## Contributing
 
