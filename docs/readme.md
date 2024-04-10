@@ -1,3 +1,5 @@
+redirect-url / [Exports](modules.md)
+
 <h1 align="center">
   redirect-url
 </h1>
@@ -103,7 +105,8 @@ export const handleDocumentRequest = request => {
 
 ## API
 
-[See here!](https://github.com/TomerAberbach/redirect-url/blob/main/docs/modules.md)
+See the
+[TSDoc comments](https://github.com/TomerAberbach/redirect-url/blob/main/src/index.ts).
 
 ## Contributing
 
