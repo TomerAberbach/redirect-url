@@ -1,4 +1,6 @@
-redirect-url / [Exports](modules.md)
+**redirect-url** • [**Docs**](globals.md)
+
+---
 
 <h1 align="center">
   redirect-url
@@ -16,6 +18,9 @@ redirect-url / [Exports](modules.md)
   </a>
   <a href="https://unpkg.com/redirect-url/dist/index.min.js">
     <img src="https://deno.bundlejs.com/?q=redirect-url&config={%22compression%22:{%22type%22:%22brotli%22}}&badge" alt="brotli size" />
+  </a>
+  <a href="https://github.com/sponsors/TomerAberbach">
+    <img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="Sponsor">
   </a>
 </div>
 
@@ -118,11 +123,9 @@ Stars are always welcome!
 For bugs and feature requests,
 [please create an issue](https://github.com/TomerAberbach/redirect-url/issues/new).
 
-For pull requests, please read the
-[contributing guidelines](https://github.com/TomerAberbach/redirect-url/blob/main/contributing.md).
-
 ## License
 
-[Apache License 2.0](https://github.com/TomerAberbach/redirect-url/blob/main/license)
-
-This is not an official Google product.
+[MIT](https://github.com/TomerAberbach/redirect-url/blob/main/license) ©
+[Tomer Aberbach](https://github.com/TomerAberbach) \
+[Apache 2.0](https://github.com/TomerAberbach/redirect-url/blob/main/license-apache) ©
+[Google](https://github.com/TomerAberbach/redirect-url/blob/main/notice-apache)

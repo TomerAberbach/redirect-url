@@ -3,6 +3,6 @@
   "include": ["**/*"],
   "typedocOptions": {
     "entryPoints": "./src/index.ts",
-    "entryDocument": "readme.md"
+    "entryFileName": "readme"
   }
 }
