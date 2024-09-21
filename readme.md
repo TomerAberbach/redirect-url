@@ -110,7 +110,7 @@ export default handleRequest
 
 ## API
 
-[See here!](https://github.com/TomerAberbach/redirect-url/blob/main/docs/modules.md)
+[See here!](https://github.com/TomerAberbach/redirect-url/blob/main/docs/globals.md)
 
 ## Contributing
 
