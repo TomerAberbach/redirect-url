@@ -41,6 +41,8 @@ $ npm i redirect-url
 
 ## Usage
 
+<!-- eslint-disable -->
+
 ```js
 import { createRedirectUrl, parseRedirectUrl } from 'redirect-url'
 
@@ -89,9 +91,9 @@ const redirectsMiddleware = (req, res, next) => {
 app.all(`*`, redirectsMiddleware)
 ```
 
-### Remix
+### React Router
 
-[**entry.server**](https://remix.run/docs/en/main/file-conventions/entry.server):
+[**entry.server.tsx**](https://reactrouter.com/api/framework-conventions/entry.server.tsx):
 
 <!-- eslint-disable consistent-return -->
 
