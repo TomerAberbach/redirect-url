@@ -56,8 +56,8 @@
   },
   "prettier": "@tomer/prettier-config",
   "dependencies": {
-    "path-to-regexp": "^6.2.2",
-    "type-fest": "^4.20.1"
+    "path-to-regexp": "^6.3.0",
+    "type-fest": "^4.41.0"
   },
   "devDependencies": {
     "@fast-check/vitest": "^0.2.2",
