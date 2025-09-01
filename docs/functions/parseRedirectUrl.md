@@ -1,4 +1,4 @@
-[**redirect-url**](../readme.md) • **Docs**
+[**redirect-url**](../readme.md)
 
 ---
 
@@ -6,8 +6,11 @@
 
 # Function: parseRedirectUrl()
 
-> **parseRedirectUrl**(`redirects`, `options`?):
+> **parseRedirectUrl**(`redirects`, `options?`):
 > [`RedirectUrl`](../type-aliases/RedirectUrl.md)
+
+Defined in:
+[index.ts:40](https://github.com/TomerAberbach/redirect-url/blob/d8aef2e911ad779789410cadd16cafc472e6123a/src/index.ts#L40)
 
 Compiles and returns a [RedirectUrl](../type-aliases/RedirectUrl.md) function
 from a redirects specification string.
@@ -26,23 +29,35 @@ Each line of the string can be either:
 
 - Whitespace and/or comment (starting with `#`), in which case it the line is
   ignored.
-- Whitespace separated ObjectRedirect#from, ObjectRedirect#to, and optionally
-  ObjectRedirect#status.
+- Whitespace separated
+  [ObjectRedirect#from](../type-aliases/ObjectRedirect.md#from),
+  [ObjectRedirect#to](../type-aliases/ObjectRedirect.md#to), and optionally
+  [ObjectRedirect#status](../type-aliases/ObjectRedirect.md#status).
 
 See [Redirect](../type-aliases/Redirect.md) for how to specify redirects and
 [RedirectUrlOptions](../type-aliases/RedirectUrlOptions.md) for options.
 
 ## Parameters
 
-• **redirects**: `string`
+### redirects
 
-• **options?**:
+`string`
+
+### options?
+
 `ReadonlyObjectDeep`\<[`RedirectUrlOptions`](../type-aliases/RedirectUrlOptions.md)\>
 
 ## Returns
 
 [`RedirectUrl`](../type-aliases/RedirectUrl.md)
 
-## Defined in
+## Example
 
-[index.ts:40](https://github.com/TomerAberbach/redirect-url/blob/4ea3b1ff21e8531a6e9e3b9c316a108c443a4f1f/src/index.ts#L40)
+```
+# Nice :)
+/bliss          https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+# Other redirects...
+/home           /          307
+/:splat*.html   /:splat*
+```

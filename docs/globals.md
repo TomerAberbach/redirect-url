@@ -1,4 +1,4 @@
-[**redirect-url**](readme.md) • **Docs**
+[**redirect-url**](readme.md)
 
 ---
 

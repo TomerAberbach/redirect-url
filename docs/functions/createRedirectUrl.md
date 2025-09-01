@@ -1,4 +1,4 @@
-[**redirect-url**](../readme.md) • **Docs**
+[**redirect-url**](../readme.md)
 
 ---
 
@@ -8,6 +8,9 @@
 
 > **createRedirectUrl**(`redirects`, `__namedParameters`):
 > [`RedirectUrl`](../type-aliases/RedirectUrl.md)
+
+Defined in:
+[index.ts:90](https://github.com/TomerAberbach/redirect-url/blob/d8aef2e911ad779789410cadd16cafc472e6123a/src/index.ts#L90)
 
 Compiles and returns a [RedirectUrl](../type-aliases/RedirectUrl.md) function.
 
@@ -24,18 +27,17 @@ See [Redirect](../type-aliases/Redirect.md) for how to specify redirects and
 
 ## Parameters
 
-• **redirects**: readonly
-(`ReadonlyObjectDeep`\<[`ObjectRedirect`](../type-aliases/ObjectRedirect.md)\>
-\| readonly [`string`, `string`])[]
+### redirects
 
-• **\_\_namedParameters**:
-`ReadonlyObjectDeep`\<[`RedirectUrlOptions`](../type-aliases/RedirectUrlOptions.md)\>
+readonly
+(`ReadonlyObjectDeep`\<[`ObjectRedirect`](../type-aliases/ObjectRedirect.md)\>
+\| readonly \[`string`, `string`\])[]
+
+### \_\_namedParameters
+
+`ReadonlyDeep`\<[`RedirectUrlOptions`](../type-aliases/RedirectUrlOptions.md)\>
 = `{}`
 
 ## Returns
 
 [`RedirectUrl`](../type-aliases/RedirectUrl.md)
-
-## Defined in
-
-[index.ts:90](https://github.com/TomerAberbach/redirect-url/blob/4ea3b1ff21e8531a6e9e3b9c316a108c443a4f1f/src/index.ts#L90)

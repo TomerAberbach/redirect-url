@@ -1,5 +1,6 @@
-import { createRedirectUrl, parseRedirectUrl } from '../src/index.ts'
-import type { RedirectUrlResult } from '../src/index.ts'
+import { expect, test } from 'vitest'
+import { createRedirectUrl, parseRedirectUrl } from './index.ts'
+import type { RedirectUrlResult } from './index.ts'
 
 test.each([
   [`https://tomeraberba.ch`, [`https://tomeraberba.ch/0`, 302]],
@@ -100,7 +101,7 @@ test(`parseRedirectUrl - too many parts in line`, () => {
 
 test(`parseRedirectUrl - bad status`, () => {
   expect(() => parseRedirectUrl(`/ /hello howdy`)).toThrow(
-    new Error(`Bad status: howdy`),
+    new TypeError(`Bad status: howdy`),
   )
 })
 
